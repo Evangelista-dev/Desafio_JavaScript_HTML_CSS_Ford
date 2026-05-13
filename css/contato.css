@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px;
+}
+
+
+.form-contato {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+
+.form-contato h3 {
+    margin-bottom: 15px;
+}
+
+/*  caixinha de texto BONITINHA XD */
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+}
+
+.btn-enviar {
+    background-color: #0056b3;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.imagemcentral {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 380px;
+
+}
+
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-enviar {
+    background-color: #0056b3;
+    transition: all 0.3s ease;
+}
+
+.btn-enviar:hover {
+    background-color: #016cdd;
+    transform: scale(1.05);
+    transform: translateY(-5px);
+}
+
+.Copyright {
+    margin-right: 5%;
+}
+
+.sobrevc {
+    font-family: "DM Sans", sans-serif;
+}
+
+/* MEDIA QUERY PARA CELULARES / TABLETS */
+@media screen and (max-width: 768px) {
+
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .formulario-container {
+        padding: 20px;
+        gap: 30px;
+    }
+
+
+    .form-contato {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .imagemcentral {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .imagemcentral img {
+        max-width: 100%;
+        height: auto;
+    }
+}

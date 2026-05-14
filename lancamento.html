@@ -46,7 +46,7 @@
 
                 <img src="img/XL Cabine.jpg" alt="Imagem XL AT" class="fotocarro1">
                 <label for="XL">
-                    <input type="checkbox" id="XL">
+                    <input type="checkbox" id="XL" onchange="SetCarToCompare(this, new Car('XL Cabine Simples 2.2 Diesel 4X4 MT 2022', 183850, 511, 1821, 232, 1234, 2.2, 160, 1420, 'Aço Estampado 16', 'img/XL Cabine.jpg'));">
                     <span><strong class="XL-text">1. XL Cabine Simples 2.2 Diesel 4X4 MT 2022</strong></span>
                     <span class="preco">Preço Sugerido: R$ 222.790</span>
                     <div class="option">
@@ -62,9 +62,9 @@
 
 
         <div class="Card-Carro">
-            <img src="img/xls 2.2 diesel.jpg" alt="Imagem XL MT" class="fotocarro2">
+            <img src="img/xls 2.2 diesel.jpg" alt="Imagem XL MT" class="fotocarro2" >
             <label for="XL2">
-                <input type="checkbox" id="XL2">
+                <input type="checkbox" id="XL2" onchange="SetCarToCompare(this, new Car('XLS 2.2 Diesel 4X4 AT 2022', 220690, 511, 1821, 232, 1076, 2.2, 160, 1180, 'Aço Estampado 16', 'img/xls 2.2 diesel.jpg'));">
                 <span><strong class="XL2-texte">2.XLS 2.2 Diesel 4X4 AT 2022</strong></span>
                 <span class="preco">Preço Sugerido: R$ 220.690</span>
                 <div class="option">
@@ -84,7 +84,7 @@
 
             <img src="img/storm.jpg" alt="Imagem Storm" class="fotocarro3">
             <label for="storm">
-                <input type="checkbox" id="storm">
+                <input type="checkbox" id="storm" onchange="SetCarToCompare(this, new Car('Storm 3.2 Diesel 4X4 AT 2022', 222790, 511, 1821, 232, 1040, 3.2, 200, 1180, 'Liga Leve 17', 'img/storm.jpg'));">
                 <span><strong class="storm-text">3. Storm 3.2 Diesel 4X4 AT 2022</strong></span>
                 <span class="preco"> Preço Sugerido: R$ 222.790</span>
                 <div class="option">
@@ -125,6 +125,8 @@
 
     </footer>
 
+    <script src="js/camparar.js"></script>
+    
 </body>
 
 </html>

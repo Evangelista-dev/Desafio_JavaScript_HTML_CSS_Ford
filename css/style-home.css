@@ -18,10 +18,12 @@ body {
 
 /* Container principal que limita o que aparece */
 .carrossel {
-    width: 800px;
-    height: 400px;
+    width: 1200px;
+    height: 600px;
     margin: 0 auto;
     overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px black ;
     /* Esconde o que sai dos 800x400 */
 }
 
@@ -36,7 +38,7 @@ body {
 .first_slide,
 .slide {
     min-width: 100%;
-    height: 400px;
+    height: 600px;
     transition: 0.6s ease;
 }
 
@@ -47,6 +49,8 @@ body {
     object-fit: cover;
     object-position: center;
     display: block;
+    border-radius: 15px;
+    
 }
 
 .carrossel-fila input {
@@ -55,15 +59,17 @@ body {
 
 .first_slide img,
 .slide img {
-    width: 800px;
-    height: 400px;
+    width: 1200px;
+    height: 600px;
+    border-radius: 15px;
+    
 
 }
 
 .navagation-manual {
     position: absolute;
-    width: 800px;
-    margin-top: -40px;
+    width: 1200px;
+    margin-top: 150px;
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -105,8 +111,8 @@ body {
 
 .navagation-auto {
     position: absolute;
-    width: 800px;
-    margin-top: -40px;
+    width: 1200px;
+    margin-top: 150px;
     gap: 10px;
     display: flex;
     justify-content: center;

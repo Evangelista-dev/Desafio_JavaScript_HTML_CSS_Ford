@@ -1,32 +1,82 @@
 
-let comparar = document.querySelectorAll ('.btn-comparar');
+ let carArr = [];
 
-
-function verificarSelecionados() {
-    let carrosParaComparar = [];
-    
-    const checkboxes = document.querySelectorAll('.Card-Carro input[type="checkbox"]:checked');
-
-    checkboxes.forEach(check => {
-    
-        if (check.carroDados) {
-            carrosParaComparar.push(check.carroDados);
-        }
-    });
-
-    return carrosParaComparar;
-}
-
-function executarComparacao() {
-    const selecionados = verificarSelecionados(); 
-
-    if (selecionados.length < 2) {
-        alert("Por favor, selecione ao menos 2 carros!");
-    } else {
-     
-        // inserir a tabela 
+class Car {
+    constructor(nome, preco, alturaCacamba, alturaVeiculo, alturaSolo, capacidadeCarga, motor, potencia, volumeCacamba, roda, image){
+        this.nome = nome;
+        this.preco = preco;
+        this.alturaCacamba = alturaCacamba;
+        this.alturaVeiculo = alturaVeiculo;
+        this.alturaSolo = alturaSolo;
+        this.capacidadeCarga = capacidadeCarga;
+        this.motor = motor;
+        this.potencia = potencia;
+        this.volumeCacamba = volumeCacamba;
+        this.roda = roda;
+        this.image = image;
     }
 }
 
- comparar.addEventListener('click', executarComparacao);
+// search on array if exist carClass returning 1 if not return -1
+function GetCarArrPosition(arr, carClass) {
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i].nome  === carClass.nome)
+            return i;
+    }
+    return -1;
+}
+
+function SetCarToCompare(el, carClass) {
+    if(carClass instanceof Car){       
+        let posicao = GetCarArrPosition(carArr, carClass);
+
+        if(el.checked){
+
+            if(posicao === -1){
+                carArr.push(carClass);
+            }
+        } else {
+            if(posicao !== -1){
+                carArr.splice(posicao, 1);
+            }
+        } 
+        console.log("Carros selecionados:", carArr);
+    } else {
+        throw "Voçê precisa selecionar um carro";
+    }
+}
+
+function ShowCompare() {
+    if(carArr.length < 2 || carArr.length ==3 ) {
+        alert("Precisa marcar pelo menos 2 carros para apresentar a comparação");
+        return;
+    }
+
+    UpdateCompareTable();
+    document.getElementById("compare").style.display = "block"
+}
+
+function HideCompare(){
+    document.getElementById("compare").style.display = "none"; 
+}
+
+function UpdateCompareTable() {
+    
+    for(let i = 0; i < 2; i++) {
+        let carro = carArr[i];
+        
+
+        document.getElementById(`compare_image_${i}`).innerHTML = `<img src="${carro.image}" width="100">`;
+        document.getElementById(`compare_modelo_${i}`).innerText = carro.nome;
+        document.getElementById(`compare_alturacacamba_${i}`).innerText = carro.alturaCacamba;
+        document.getElementById(`compare_alturaveiculo_${i}`).innerText = carro.alturaVeiculo;
+        document.getElementById(`compare_alturasolo_${i}`).innerText = carro.alturaSolo;
+        document.getElementById(`compare_capacidadecarga_${i}`).innerText = carro.capacidadeCarga;
+        document.getElementById(`compare_motor_${i}`).innerText = carro.motor;
+        document.getElementById(`compare_potencia_${i}`).innerText = carro.potencia;
+        document.getElementById(`compare_volumecacamba_${i}`).innerText = carro.volumeCacamba;
+        document.getElementById(`compare_roda_${i}`).innerText = carro.roda;
+        document.getElementById(`compare_preco_${i}`).innerText = `R$ ${carro.preco.toLocaleString('pt-BR')}`;
+    }
+}
 

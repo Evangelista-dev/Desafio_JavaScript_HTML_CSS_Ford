@@ -23,11 +23,13 @@
     </header>
 
 
+
     <main>
 
+    
 
         <div class="carrossel">
-            <div class="carrossel-fila"> 
+            <div class="carrossel-fila">
 
                 <!-- Criação dos radio -->
                 <input type="radio" name="radio-btn" id="radio1">
@@ -40,6 +42,7 @@
 
                 <div class="slide">
                     <img src="img/imagem_2.jpg" alt="imagem_2">
+                    <p id="texto2"></p>
                 </div>
 
                 <div class="slide">
@@ -69,8 +72,7 @@
             </div>
         </div>
 
-        <p class="novidadetropa">Está é a nova ford ranger 2022. Confira as novidades <a href="lancamento.html">aqui</a>
-        </p>
+
 
     </main>
     <footer>
@@ -91,6 +93,13 @@
         <p class="Copyright">© 2026 Ford Brasil | Viva o Novo. Todos os direitos reservados.</p>
         <img src="img/ford-96.png" alt="Logo Ford">
     </footer>
+
+    <script>
+        Carousel.push(new Carousel("imagem_1.jpg", "Esta é a nova Ranger Ford 2022. Verifique novidades.", "lancamento.html"));
+        Carousel.push(new Carousel("imagem_2.jpg", "Ford a nossa história", "#"));
+        Carousel.push(new Carousel("imagem_3.jpg", "Nova Ford Bronco Sport 2022", "lancamento.html"));
+        Carousel.Start(carouselArr);
+    </script>
 
     <script src="js/carrossel.js"></script>
 </body>

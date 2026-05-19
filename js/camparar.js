@@ -47,8 +47,13 @@ function SetCarToCompare(el, carClass) {
 }
 
 function ShowCompare() {
-    if(carArr.length < 2 || carArr.length ==3 ) {
+    if(carArr.length < 2 ) {
         alert("Precisa marcar pelo menos 2 carros para apresentar a comparação");
+        return;
+    }
+
+     if(carArr.length == 3 ) {
+        alert("Selecione no máximo 2 carros");
         return;
     }
 

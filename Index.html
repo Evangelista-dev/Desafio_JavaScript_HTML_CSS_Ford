@@ -26,27 +26,30 @@
 
     <main>
 
-    
+
 
         <div class="carrossel">
-            <div class="carrossel-fila">
-
-                <!-- Criação dos radio -->
+             <!-- Criação dos radio -->
                 <input type="radio" name="radio-btn" id="radio1">
                 <input type="radio" name="radio-btn" id="radio2">
                 <input type="radio" name="radio-btn" id="radio3">
 
+            <div class="carrossel-fila">
                 <div class="first_slide">
                     <img src="img/imagem_1.jpg" alt="imagem_1">
+                    <p class="legenda-carrossel">Esta é a nova Ranger Ford 2022. Verifique novidades.<a
+                            href="lancamento.html"> Confira aqui.</a></p>
                 </div>
 
                 <div class="slide">
                     <img src="img/imagem_2.jpg" alt="imagem_2">
-                    <p id="texto2"></p>
+                    <p class="legenda-carrossel"> Ford a nossa história</p>
                 </div>
 
                 <div class="slide">
                     <img src="img/imagem_3.jpg" alt="imagem_3">
+                    <p class="legenda-carrossel">Nova Ford Bronco Sport 2022 <a href="lancamento.html"> Confira
+                            aqui.</a></p>
                 </div>
 
             </div>
@@ -93,13 +96,7 @@
         <p class="Copyright">© 2026 Ford Brasil | Viva o Novo. Todos os direitos reservados.</p>
         <img src="img/ford-96.png" alt="Logo Ford">
     </footer>
-
-    <script>
-        Carousel.push(new Carousel("imagem_1.jpg", "Esta é a nova Ranger Ford 2022. Verifique novidades.", "lancamento.html"));
-        Carousel.push(new Carousel("imagem_2.jpg", "Ford a nossa história", "#"));
-        Carousel.push(new Carousel("imagem_3.jpg", "Nova Ford Bronco Sport 2022", "lancamento.html"));
-        Carousel.Start(carouselArr);
-    </script>
+   
 
     <script src="js/carrossel.js"></script>
 </body>

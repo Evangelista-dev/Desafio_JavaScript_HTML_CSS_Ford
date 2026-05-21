@@ -15,6 +15,7 @@ body {
 }
 
 .carrossel {
+    animation: fade-in-bottom 1s  forwards;
     width: 1200px;
     height: 600px;
     margin: 0 auto;
@@ -150,6 +151,30 @@ body {
     font-family: "DM Sans", sans-serif;
 }
 
+@-webkit-keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
 
 
 @media screen and (max-width: 768px) {

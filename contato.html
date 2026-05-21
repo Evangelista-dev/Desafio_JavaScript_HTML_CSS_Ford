@@ -26,25 +26,23 @@
 
         <img src="img/xls 2.2 diesel.jpg" alt="Carro XLS" class="imagemcentral">
         <div class="formulario-container">
+            <form class="form-contato" onsubmit="event.preventDefault(); Post(); Enviar();">
 
-            <form class="form-contato">
-                <h3 class="sobrevc">Sobre Você</h3>
-                <input type="text" placeholder="NOME*" required pattern="[A-Za-zÀ-ÿ\s]+"
-                    title="O nome deve conter apenas letras.">
-                <input type="text" placeholder="SOBRENOME*" required pattern="[A-Za-zÀ-ÿ\s]+"
-                    title="O nome deve conter apenas letras.">
-                <input type="email" placeholder="E-MAIL*">
-                <input type="text" placeholder="CPF*">
-                <input type="tel" placeholder="TELEFONE*">
+                <input type="text" id="nomeid" placeholder="NOME*">
+                <input type="text" id="sobrenomeid" placeholder="SOBRENOME*">
+                <input type="email" id="emailid" placeholder="E-MAIL*">
+                <input type="text" id="cpfid" placeholder="CPF*">
+                <input type="tel" id="telefoneid" placeholder="TELEFONE*">
 
                 <select class="aipapai">
-                    <option value="">O que deseja contatar?</option>
+                    <option value="">O que deseja contactar?</option>
                     <option value="Reclamações">Reclamações</option>
                     <option value="Elogios">Elogios</option>
                     <option value="Solicitação">Solicitação</option>
                 </select>
 
-                <button type="submit" class="btn-enviar" class="botaoenviar">Enviar</button>
+                <button type="submit" class="btn-enviar">Enviar</button>
+
             </form>
         </div>
 
@@ -71,7 +69,7 @@
         <img src="img/ford-96.png" alt="Logo Ford">
 
     </footer>
-
+    <script src="js/forms.js"></script>
 </body>
 
 </html>

@@ -1,11 +1,12 @@
 class contato {
-    constructor(nome, sobrenome, email, cpf, telefone, contato){
+    constructor(nome, sobrenome, email, cpf, telefone, contato, mensagem){
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.email = email;
         this.cpf = cpf;
         this.telefone = telefone;
         this.contato = contato;
+        this.mensagem = mensagem;
     }
 }
 
@@ -18,6 +19,8 @@ function Post() {
         document.getElementById("cpfid").value,
         document.getElementById("telefoneid").value,
         document.querySelector(".aipapai").value
+        document.getElementById("mensagemid").value,
+        
     );
 
     console.log("NOVO CADASTRO REGISTRADO:");

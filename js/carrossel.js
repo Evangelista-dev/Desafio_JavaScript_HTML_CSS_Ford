@@ -14,8 +14,15 @@ class Carousel {
             Carousel._size = arr.length;
 
             const tagsLegenda = document.querySelectorAll('.legenda-carrossel');
+            const tagsImagem = document.querySelectorAll('.carrossel-fila img');
 
             arr.forEach((slide, index) => {
+            
+                if (tagsImagem[index] && slide.imagem) {
+                    tagsImagem[index].src = slide.imagem;
+                }
+
+                a
                 if (tagsLegenda[index]) {
                     if (slide.pagina && slide.pagina !== "#") {
                         tagsLegenda[index].innerHTML = `${slide.texto} <a href="${slide.pagina}">Confira aqui.</a>`;
@@ -26,15 +33,11 @@ class Carousel {
             });
 
             Carousel.Next();
-            
-            
             Carousel.ResetTimer();
-
-          
             Carousel.ConfigManualClicks();
 
         } else {
-            throw "Method Start need a Array Variable.";
+            throw new Error("Method Start needs an Array Variable.");
         }
     }
 
@@ -53,7 +56,6 @@ class Carousel {
         }
     }
 
-   
     static ResetTimer() {
         if (Carousel._interval) {
             clearInterval(Carousel._interval); 
@@ -62,32 +64,27 @@ class Carousel {
         Carousel._interval = setInterval(function () { Carousel.Next(); }, 4000);
     }
 
-  
     static ConfigManualClicks() {
         for (let i = 1; i <= Carousel._size; i++) {
             const radioElement = document.getElementById("radio" + i);
             
             if (radioElement) {
-               
                 radioElement.addEventListener('change', function() {
-                    
-                    
                     Carousel._sequence = i;
                     if (Carousel._sequence >= Carousel._size) {
                         Carousel._sequence = 0;
                     }
-
-                   
                     Carousel.ResetTimer();
                 });
             }
         }
     }
-};
+}
 
+// CORREÇÃO AQUI: Adicionado a pasta "img/" correta e trocado o "#" por "lancamento.html"
+carouselArr.push(new Carousel("img/imagem_1.jpg", "Esta é a nova Ranger Ford 2022. Verifique novidades.", "lancamento.html"));
+carouselArr.push(new Carousel("img/imagem_2.jpg", "Ford a nossa história", "lancamento.html"));
+carouselArr.push(new Carousel("img/imagem_3.jpg", "Nova Ford Bronco Sport 2022", "lancamento.html"));
 
-carouselArr.push(new Carousel("imagem_1.jpg", "Esta é a nova Ranger Ford 2022. Verifique novidades.", "lancamento.html"));
-carouselArr.push(new Carousel("imagem_2.jpg", "Ford a nossa história", "#"));
-carouselArr.push(new Carousel("imagem_3.jpg", "Nova Ford Bronco Sport 2022", "lancamento.html"));
-
+// Inicializa o carrossel
 Carousel.Start(carouselArr);

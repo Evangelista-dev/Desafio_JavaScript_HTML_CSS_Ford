@@ -18,9 +18,9 @@ function Post() {
         document.getElementById("emailid").value,
         document.getElementById("cpfid").value,
         document.getElementById("telefoneid").value,
-        document.querySelector(".aipapai").value
-        document.getElementById("mensagemid").value,
-        
+        document.querySelector(".aipapai").value,
+        document.getElementById("mensagemid").value
+
     );
 
     console.log("NOVO CADASTRO REGISTRADO:");

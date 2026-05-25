@@ -6,6 +6,13 @@ body {
     flex-direction: column;
 }
 
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .formulario-container {
     animation: fade-in-bottom 1s  forwards;
     display: flex;
@@ -58,12 +65,6 @@ select {
 
 }
 
-main {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 .btn-enviar {
     background-color: #0056b3;

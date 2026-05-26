@@ -81,7 +81,6 @@ class Carousel {
     }
 }
 
-// CORREÇÃO AQUI: Adicionado a pasta "img/" correta e trocado o "#" por "lancamento.html"
 carouselArr.push(new Carousel("img/imagem_1.jpg", "Esta é a nova Ranger Ford 2022. Verifique novidades.", "lancamento.html"));
 carouselArr.push(new Carousel("img/imagem_2.jpg", "Ford a nossa história", "lancamento.html"));
 carouselArr.push(new Carousel("img/imagem_3.jpg", "Nova Ford Bronco Sport 2022", "lancamento.html"));

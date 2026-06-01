@@ -35,3 +35,24 @@ function Enviar() {
         alert('Obrigado sr(a) ' + nome.value +' '+ sobrenome.value + '  os seus dados foram encaminhados com sucesso');
     }
 }
+
+function validarFormulario(event) {
+    
+    event.preventDefault(); 
+
+    
+    const checkboxTermos = document.getElementById('lgpd-termos');
+
+    
+    if (!checkboxTermos.checked) {
+        alert("Para continuar, você deve ler e aceitar os Termos e Condições.");
+        return false; 
+    }
+
+    
+    console.log("LGPD aceita. Enviando dados...");
+    
+   
+    if (typeof Post === "function") Post();
+    if (typeof Enviar === "function") Enviar();
+}
